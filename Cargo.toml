@@ -1,0 +1,23 @@
+[package]
+name = "mkfiler"
+version = "1.0.1"
+edition = "2024"
+author = [ "Hadi Cahyadi <cumulus13@gmail.com>",]
+description = "Cross-platform file creation utility with GNTP/Growl integration"
+homepage = "https://github.com/cumulus13/mkfiler"
+repository = "https://github.com/cumulus13/mkfiler"
+license = "MIT"
+keywords = [ "mkfile", "touch", "notification", "gntp",]
+rst-version = "1.70"
+
+[dependencies]
+clap = "4.5.53"
+copypasta = "0.10.2"
+gntp = "0.1.3"
+lazy_static = "1.5.0"
+notify-rust = "4.11.7"
+regex = "1.12.2"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = [ "--cfg", "docsrs",]
