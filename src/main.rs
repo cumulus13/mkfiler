@@ -12,8 +12,6 @@ use std::process;
 use std::sync::Mutex;
 use lazy_static::lazy_static;
 
-// Include GNTP module
-// mod gntp;
 use gntp::{GntpClient, NotificationType, Resource};
 
 const NAME: &str = "mkfile";
@@ -398,14 +396,3 @@ fn main() {
         process::exit(1);
     }
 }
-
-// Cargo.toml:
-// [package]
-// name = "mkfile"
-// version = "2.0.0"
-// edition = "2021"
-//
-// [dependencies]
-// regex = "1.10"
-// uuid = { version = "1.6", features = ["v4"] }
-// lazy_static = "1.4"
