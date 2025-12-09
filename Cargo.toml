@@ -1,6 +1,10 @@
+[[bin]]
+name = "mkfile"
+path = "src/main.rs"
+
 [package]
 name = "mkfiler"
-version = "1.0.1"
+version = "1.0.2"
 edition = "2024"
 author = [ "Hadi Cahyadi <cumulus13@gmail.com>",]
 description = "Cross-platform file creation utility with GNTP/Growl integration"
@@ -9,6 +13,7 @@ repository = "https://github.com/cumulus13/mkfiler"
 license = "MIT"
 keywords = [ "mkfile", "touch", "notification", "gntp",]
 rst-version = "1.70"
+exclude = [ "gitignore_backup/", "mkfile.exe", "target/", "mkfiler.sublime-project", "mkfiler.sublime-workspace", ".pt/",]
 
 [dependencies]
 clap = "4.5.53"
