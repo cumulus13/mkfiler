@@ -15,8 +15,8 @@ use lazy_static::lazy_static;
 use gntp::{GntpClient, NotificationType, Resource};
 
 const NAME: &str = "mkfile";
-const VERSION: &str = "2.0";
-const AUTHOR: &str = "licface (licface@yahoo.com)";
+const VERSION: &str = env!("CARGO_PKG_VERSION");
+const AUTHOR: &str = "cumulus13 (cumulus13@gmail.com)";
 
 // Global GNTP client (initialized once)
 lazy_static! {
@@ -313,10 +313,10 @@ fn print_help() {
     println!("Author: {}\n", AUTHOR);
     println!("Usage: mkfile [OPTIONS] FILE...\n");
     println!("Options:");
-    println!("  --help         Show this help message");
-    println!("  --version      Show version information");
-    println!("  --debug        Show detailed error messages");
-    println!("  --no-gntp      Disable GNTP/Growl notifications\n");
+    println!("  --help, -h         Show this help message");
+    println!("  --version, -v      Show version information");
+    println!("  --debug, -d        Show detailed error messages");
+    println!("  --no-gntp          Disable GNTP/Growl notifications\n");
     println!("Examples:");
     println!("  mkfile file.txt                       # Create single file");
     println!("  mkfile file1.txt file2.py file3       # Create multiple files");
@@ -344,7 +344,7 @@ fn main() {
                 println!("mkfile v{} by {}", VERSION, AUTHOR);
                 process::exit(0);
             }
-            "--debug" => {
+            "--debug" | "-d" => {
                 debug = true;
             }
             "--no-gntp" => {

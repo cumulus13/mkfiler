@@ -4,7 +4,7 @@ bin = [
 
 [package]
 name = "mkfiler"
-version = "1.0.5"
+version = "1.0.6"
 edition = "2024"
 authors = [
     "Hadi Cahyadi <cumulus13@gmail.com>",
@@ -27,6 +27,7 @@ exclude = [
     "mkfiler.sublime-project",
     "mkfiler.sublime-workspace",
     ".pt/",
+    "test/",
 ]
 
 [package.metadata.docs.rs]
