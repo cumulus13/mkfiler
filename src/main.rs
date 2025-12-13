@@ -1,7 +1,7 @@
 // mkfile - Create blank files with notification support
 // Cross-platform file creation utility with GNTP/Growl integration
 //
-// Author: licface (licface@yahoo.com)
+// Author: cumulus13 (cumulus13@gmail.com)
 // Version: 2.0
 
 use regex::Regex;
